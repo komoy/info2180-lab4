@@ -1,4 +1,4 @@
-window.onload=load
+/*window.onload=load
 
 function load()
 {
@@ -11,4 +11,17 @@ function load()
 	}
 
 
+}*/
+window.onload=load
+
+function load()
+{
+	let boundary= document.getElementById("boundary1");
+
+	boundary.onmouseover=function()
+	{
+		//this.className=this.className+"youlose";
+		this.className=this.className+" youlose";
+
+	}
 }
