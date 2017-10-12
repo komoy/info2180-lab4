@@ -12,6 +12,8 @@ function load()
 
 
 }*/
+
+//Exercise 1
 window.onload=load
 
 function load()
@@ -20,8 +22,24 @@ function load()
 
 	boundary.onmouseover=function()
 	{
-		//this.className=this.className+"youlose";
+		
 		this.className=this.className+" youlose";
 
 	}
+	//Exercise2
+	let allBoundary=document.querySelectorAll(".boundary")
+
+	for (var i =0; i< allBoundary.length;  i++) {
+		allBoundary[i].onmouseover=redOnHover;
+	}
+	
+	 function redOnHover(){
+			for (var i=0; i < allBoundary.length; i++) {
+				allBoundary[i].className+=" youlose";
+			}
+		}
+		//
+
+
 }
+
