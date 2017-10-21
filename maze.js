@@ -11,3 +11,4 @@ function load()
 		this.className=this.className+" youlose";
 
 	}
+}
