@@ -32,6 +32,8 @@ function load()
 
 function overBoundary() {
      loser = true;
+	var status=document.getelementbyId("start")
+	status.textContent = "You lose!";
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary youlose";
@@ -40,13 +42,16 @@ function overBoundary() {
 
 function startClick() {
     loser = false;
+	var status=document.getelementbyId("end")
+	status.textContent = "Find the end!";
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary";
     }
 }
-
+//EX5
 function overEnd() {
+	var status=document.getelementbyId("status")
     if(loser) {
 	    
         status.textContent=" You lost !";
