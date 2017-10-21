@@ -20,7 +20,7 @@ function load()
 }
 	
 	 function redOnHover()
-		{ let allBoundary=document..querySelectorAll(".boundary");
+		{ let allBoundary=document.querySelectorAll(".boundary");
 			for (var i=0; i < allBoundary.length; i++) 
 			{
 				allBoundary[i].className+=" youlose";
