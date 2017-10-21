@@ -12,15 +12,17 @@ function load()
 
 	}
 	//Exercise2
-	let allBoundary=document.querySelectorAll(".boundary")
+	let allBoundary=document.querySelectorAll(".boundary");
 
 	for (var i =0; i< allBoundary.length;  i++) {
 		allBoundary[i].onmouseover=redOnHover;
 	}
 }
 	
-	 function redOnHover(){
-			for (var i=0; i < allBoundary.length; i++) {
+	 function redOnHover()
+		{ let allBoundary=document..querySelectorAll(".boundary");
+			for (var i=0; i < allBoundary.length; i++) 
+			{
 				allBoundary[i].className+=" youlose";
 			}
-			}
+		}
