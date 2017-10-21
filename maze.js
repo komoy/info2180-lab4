@@ -48,9 +48,10 @@ function startClick() {
 
 function overEnd() {
     if(loser) {
-        alert(" You lost !");
+	    
+        status.textContent=" You lost !";
     } else {
-        alert("You win!");
+        status.textContent="You win!";
     }
 }
 	
