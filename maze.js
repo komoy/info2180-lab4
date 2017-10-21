@@ -17,6 +17,40 @@ function load()
 	for (var i =0; i< allBoundary.length;  i++) {
 		allBoundary[i].onmouseover=redOnHover;
 	}
+	//Exercise3
+	var loser = false; // when the user hits a wall
+
+
+    document.getElementById("start").onclick = startClick;
+    document.getElementById("end").onmouseover = overEnd;
+    var boundaries = document.querySelectorAll(".boundary");
+    for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].onmouseover = overBoundary;
+    }
+}
+
+function overBoundary() {
+    loser = true;
+    var boundaries = document.querySelectorAll(".boundary");
+    for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].className = "boundary youlose";
+    }
+}
+
+function startClick() {
+    loser = false;
+    var boundaries = document.querySelectorAll(".boundary");
+    for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].className = "boundary";
+    }
+}
+
+function overEnd() {
+    if(loser) {
+        alert(" You lost !");
+    } else {
+        alert("You win!");
+    }
 }
 	
 	 function redOnHover()
@@ -26,4 +60,5 @@ function load()
 				allBoundary[i].className+=" youlose";
 			}
 		}
+
 
