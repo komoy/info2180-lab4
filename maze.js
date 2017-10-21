@@ -11,4 +11,19 @@ function load()
 		this.className=this.className+" youlose";
 
 	}
+	//Exercise2
+	let allBoundary=document.querySelectorAll(".boundary");
+
+	for (var i =0; i< allBoundary.length;  i++) {
+		allBoundary[i].onmouseover=redOnHover;
+	}
 }
+	
+	 function redOnHover()
+		{ let allBoundary=document.querySelectorAll(".boundary");
+			for (var i=0; i < allBoundary.length; i++) 
+			{
+				allBoundary[i].className+=" youlose";
+			}
+		}
+
