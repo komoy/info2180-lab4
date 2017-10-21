@@ -1,5 +1,6 @@
 //Exercise 1
 window.onload=load
+var loser = false; // when the user hits a wall
 
 function load()
 {
@@ -18,7 +19,7 @@ function load()
 		allBoundary[i].onmouseover=redOnHover;
 	}
 	//Exercise3
-	var loser = false; // when the user hits a wall
+	
 
 
     document.getElementById("start").onclick = startClick;
@@ -30,7 +31,7 @@ function load()
 }
 
 function overBoundary() {
-    var loser = true;
+     loser = true;
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary youlose";
@@ -38,7 +39,7 @@ function overBoundary() {
 }
 
 function startClick() {
-   var loser = false;
+    loser = false;
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary";
@@ -46,7 +47,6 @@ function startClick() {
 }
 
 function overEnd() {
-	var loser;
     if(loser) {
         alert(" You lost !");
     } else {
