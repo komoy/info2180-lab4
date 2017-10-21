@@ -30,7 +30,7 @@ function load()
 }
 
 function overBoundary() {
-    loser = true;
+    let loser = true;
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary youlose";
@@ -38,7 +38,7 @@ function overBoundary() {
 }
 
 function startClick() {
-    loser = false;
+   let loser = false;
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].className = "boundary";
