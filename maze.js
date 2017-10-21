@@ -17,42 +17,10 @@ function load()
 	for (var i =0; i< allBoundary.length;  i++) {
 		allBoundary[i].onmouseover=redOnHover;
 	}
+}
 	
 	 function redOnHover(){
 			for (var i=0; i < allBoundary.length; i++) {
 				allBoundary[i].className+=" youlose";
 			}
-		}
-		var loser = false; // when the user hits a wall
-
-
-    $("start").onclick = startClick;
-    $("end").onmouseover = overEnd;
-    var boundaries = $$("div#maze div.boundary");
-    for (var i = 0; i < boundaries.length; i++) {
-        boundaries[i].onmouseover = overBoundary;
-    }
-
-function overBoundary() {
-    loser = true;
-    var boundaries = $$("div#maze div.boundary");
-    for (var i = 0; i < boundaries.length; i++) {
-        boundaries[i].addClassName("youlose");
-    }
-}
-
-function startClick() {
-    loser = false;
-    var boundaries = $$("div#maze div.boundary");
-    for (var i = 0; i < boundaries.length; i++) {
-        boundaries[i].removeClassName("youlose");
-    }
-}
-
-function overEnd() {
-    if(loser) {
-        alert(" You lost !");
-    } else {
-        alert("You win!");
-    }
-}
+			}
